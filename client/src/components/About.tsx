@@ -61,34 +61,27 @@ export default function About() {
 
             <div className="space-y-4 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
               <p data-testid="text-about-intro">
-                I'm Julian Xeer, a full stack developer and computer engineer based
-                in São Paulo, Brazil.
+                I'm Julian Xeer, a full stack developer and creative technologist based
+                in New York City.
               </p>
 
               <p data-testid="text-about-experience">
-                I have been working in software development for web, desktop, and
-                embedded systems for the last 13 years.
+                I enjoy working on high-impact projects that I believe will shape the
+                future of the web and the world.
               </p>
 
               <p data-testid="text-about-background">
-                During this time, I have worked on systems across various business
-                sectors, but I have spent most of this time developing web and
-                embedded applications for civil aviation.
+                I love creating digital platforms for artists, musicians, non-profits, educators, small businesses, and spiritual practitioners—helping people and organizations share their message with the world. 
               </p>
 
               <p data-testid="text-about-education">
-                I graduated with a degree in Computer Engineering from UFABC in
-                2016. My journey into the world of programming began in childhood,
-                driven by a keen interest in game development. This early passion for
-                creating games sparked my pursuit of a tech career. Although I don't
-                work as a game developer, I occasionally participate in game jams.
+                Blending design, storytelling, and technology, I can turn ideas into meaningful digital experiences that empower communities and support social change and holistic evolution.
+
+
               </p>
 
               <p data-testid="text-about-philosophy">
-                My focus is always on seeking solutions to challenges through
-                technology. It doesn't matter if the challenge comes from an
-                individual or a company. It doesn't matter if the solution will be
-                hardware or software.
+                Whether architecting inclusive user interfaces, integrating data-driven tools for nonprofit operations, or leading cross-functional Web3   teams toward mission-aligned outcomes, Julian brings both creative vision and executional rigor to build technology that empowers communities and elevates the user experience.
               </p>
             </div>
           </motion.div>
