@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import profileImage from "@assets/selfie-icon_1761795041032.jpg";
 
 export default function About() {
   const ref = useRef(null);
@@ -31,7 +32,7 @@ export default function About() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-brand-teal to-brand-purple rounded-2xl blur-xl opacity-20" />
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+                src={profileImage}
                 alt="Julian Xeer portrait"
                 className="relative w-80 h-80 object-cover rounded-2xl border-2 border-white/10 shadow-2xl"
                 data-testid="img-profile"
