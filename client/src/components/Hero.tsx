@@ -66,7 +66,7 @@ export default function Hero() {
                 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-tight"
                 data-testid="text-hero-title"
               >
-                Hi, I'm Julian Xeer
+                Hi, I'm <span className="whitespace-nowrap">Julian Xeer</span>
               </h1>
               <p className="text-2xl md:text-3xl text-white/90 font-display font-medium">
                 Full Stack Developer
