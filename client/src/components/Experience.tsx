@@ -42,7 +42,7 @@ export default function Experience() {
         <div className="max-w-6xl mx-auto">
           <div className="hidden md:block">
             <div className="relative">
-              <div className="absolute top-1/2 left-0 right-0 h-1 bg-slate-800/30 -translate-y-1/2" />
+              <div className="absolute top-20 left-0 right-0 h-1 bg-slate-800/30" />
 
               <div className="grid grid-cols-4 gap-8 relative z-10">
                 {timelineEvents.map((event, index) => {
@@ -66,27 +66,27 @@ export default function Experience() {
                         <Icon className="h-8 w-8 text-white" />
                       </div>
 
-                      <div className="space-y-2 mt-6 mb-4 relative z-20">
+                      <div className="text-2xl font-bold text-slate-900 mt-4 mb-6 relative z-20"
+                        data-testid={`text-year-${event.id}`}
+                      >
+                        {event.year}
+                      </div>
+
+                      <div className="mt-8 space-y-3">
                         <div
-                          className="text-2xl font-bold text-slate-900"
-                          data-testid={`text-year-${event.id}`}
-                        >
-                          {event.year}
-                        </div>
-                        <div
-                          className="text-lg font-semibold text-slate-800 bg-gradient-to-br from-brand-cyan via-cyan-500 to-blue-500 px-2"
+                          className="text-lg font-semibold text-slate-800"
                           data-testid={`text-title-${event.id}`}
                         >
                           {event.title}
                         </div>
-                      </div>
 
-                      <p
-                        className="text-sm text-slate-700 leading-relaxed relative z-20"
-                        data-testid={`text-description-${event.id}`}
-                      >
-                        {event.description}
-                      </p>
+                        <p
+                          className="text-sm text-slate-700 leading-relaxed"
+                          data-testid={`text-description-${event.id}`}
+                        >
+                          {event.description}
+                        </p>
+                      </div>
                     </motion.div>
                   );
                 })}
