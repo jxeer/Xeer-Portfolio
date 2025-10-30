@@ -13,7 +13,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="py-24 md:py-32 bg-gradient-to-br from-teal-900 via-cyan-900 to-blue-950 relative overflow-hidden"
+      className="py-24 md:py-32 bg-gradient-to-br from-teal-900 via-cyan-900 to-blue-950 relative overflow-visible"
       ref={ref}
     >
       <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/30 to-black/60" />

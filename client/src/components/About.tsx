@@ -88,7 +88,7 @@ export default function About() {
           </motion.div>
         </motion.div>
       </div>
-      <SectionArrow targetSection="#expertise" />
+      <SectionArrow targetSection="#expertise" variant="light" />
     </section>
   );
 }

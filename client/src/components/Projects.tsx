@@ -84,7 +84,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-24 md:py-32 bg-gradient-to-br from-indigo-950 via-purple-900 to-pink-900 relative overflow-hidden"
+      className="py-24 md:py-32 bg-gradient-to-br from-indigo-950 via-purple-900 to-pink-900 relative overflow-visible"
       ref={ref}
     >
       <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/30 to-black/60" />

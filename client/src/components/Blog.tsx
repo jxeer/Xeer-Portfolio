@@ -186,7 +186,7 @@ export default function Blog() {
           Page {currentPage} of {totalPages} ({blogPosts.length} articles total)
         </div>
       </div>
-      <SectionArrow targetSection="#contact" />
+      <SectionArrow targetSection="#contact" variant="light" />
     </section>
   );
 }

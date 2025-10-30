@@ -3,9 +3,10 @@ import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 interface SectionArrowProps {
   targetSection: string;
+  variant?: "light" | "dark";
 }
 
-export default function SectionArrow({ targetSection }: SectionArrowProps) {
+export default function SectionArrow({ targetSection, variant = "dark" }: SectionArrowProps) {
   const prefersReducedMotion = useReducedMotion();
 
   const handleClick = () => {
@@ -15,16 +16,20 @@ export default function SectionArrow({ targetSection }: SectionArrowProps) {
     }
   };
 
+  const isDark = variant === "dark";
+
   return (
     <button
       onClick={handleClick}
-      className={`absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer bg-transparent border-none p-2 hover-elevate rounded-full transition-all z-10 ${
-        prefersReducedMotion ? "" : "animate-bounce"
-      }`}
+      className={`absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer backdrop-blur-sm border-none p-3 rounded-full transition-all z-50 ${
+        isDark 
+          ? "bg-white/10 hover:bg-white/20" 
+          : "bg-gray-900/10 dark:bg-white/10 hover:bg-gray-900/20 dark:hover:bg-white/20"
+      } ${prefersReducedMotion ? "" : "animate-bounce"}`}
       data-testid={`button-scroll-to-${targetSection.replace('#', '')}`}
       aria-label={`Scroll to ${targetSection.replace('#', '')} section`}
     >
-      <ArrowDown className="h-6 w-6 text-white/60" />
+      <ArrowDown className={`h-6 w-6 ${isDark ? "text-white" : "text-gray-900 dark:text-white"}`} />
     </button>
   );
 }
