@@ -37,7 +37,7 @@ export default function Hero() {
       <div
         className="absolute inset-0"
         style={{
-          background: 'radial-gradient(ellipse at 30% 50%, rgb(139, 92, 246) 0%, rgb(126, 34, 206) 15%, rgb(88, 28, 135) 30%, rgb(17, 24, 39) 50%, rgb(190, 24, 93) 70%, rgb(136, 19, 55) 85%, rgb(17, 24, 39) 100%)',
+          background: 'radial-gradient(circle at center, rgb(139, 92, 246) 0%, rgb(126, 34, 206) 15%, rgb(88, 28, 135) 25%, rgb(190, 24, 93) 45%, rgb(136, 19, 55) 65%, rgb(17, 24, 39) 100%)',
           transform: `translateY(${parallaxOffset}px)`,
         }}
       />
