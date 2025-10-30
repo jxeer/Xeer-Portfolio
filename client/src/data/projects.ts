@@ -19,7 +19,7 @@ export const projects: Project[] = [
   },
   {
     id: "weather-track",
-    title: "Weather Track",
+    title: "Mattereum",
     description:
       "Full-stack project of a data viewer for information collected from various weather stations. This study project is built using Angular 18 for the front-end, .NET for the back-end, and MySQL and MongoDB as databases.",
     tags: ["C#", "Angular", "Bootstrap", "MySQL", "MongoDB"],
@@ -28,7 +28,7 @@ export const projects: Project[] = [
   },
   {
     id: "chat",
-    title: "Chat",
+    title: "Harmonia",
     description:
       "Chat system with the functionality of creating chat rooms, inputting names, ages and choosing colors in the chat. This project does not use a database and it's a demo of the use of socket.io in projects using Node.JS on server-side and client-side.",
     tags: ["Node.JS", "Socket.IO"],
