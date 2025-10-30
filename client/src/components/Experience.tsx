@@ -42,7 +42,7 @@ export default function Experience() {
         <div className="max-w-7xl mx-auto">
           <div className="hidden md:block">
             <div className="relative">
-              <div className="absolute top-[88px] left-0 right-0 h-1 bg-slate-800/30" />
+              <div className="absolute top-28 left-0 right-0 h-1 bg-slate-800/30" />
 
               <div className="grid grid-cols-6 gap-6 relative z-10">
                 {timelineEvents.map((event, index) => {
@@ -66,13 +66,13 @@ export default function Experience() {
                         <Icon className="h-8 w-8 text-white" />
                       </div>
 
-                      <div className="text-xl font-bold text-slate-900 mt-3 relative z-20"
+                      <div className="text-xl font-bold text-slate-900 mt-4 mb-10 relative z-20"
                         data-testid={`text-year-${event.id}`}
                       >
                         {event.year}
                       </div>
 
-                      <div className="mt-12 space-y-2">
+                      <div className="mt-4 space-y-2">
                         <div
                           className="text-base font-semibold text-slate-800"
                           data-testid={`text-title-${event.id}`}
