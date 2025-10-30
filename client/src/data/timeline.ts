@@ -1,4 +1,4 @@
-import { Star, GraduationCap, Gamepad2 } from "lucide-react";
+import { Star, GraduationCap, Gamepad2, Code2, Briefcase, Cpu } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 export interface TimelineEvent {
@@ -39,6 +39,22 @@ export const timelineEvents: TimelineEvent[] = [
     title: "Hardware",
     description:
       "I studied in a technical course from the time when motherboards × parallel interface port.",
+    icon: Cpu,
+  },
+  {
+    id: "graduation",
+    year: "2016",
+    title: "Graduation",
+    description:
+      "Graduated with a degree in Computer Engineering from UFABC, turning childhood passion into professional expertise.",
     icon: GraduationCap,
+  },
+  {
+    id: "professional",
+    year: "2023",
+    title: "Full Stack Developer",
+    description:
+      "Working on complex web and embedded applications for civil aviation with 13 years of experience.",
+    icon: Code2,
   },
 ];

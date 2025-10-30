@@ -39,12 +39,12 @@ export default function Experience() {
           </p>
         </motion.div>
 
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="hidden md:block">
             <div className="relative">
-              <div className="absolute top-20 left-0 right-0 h-1 bg-slate-800/30" />
+              <div className="absolute top-[88px] left-0 right-0 h-1 bg-slate-800/30" />
 
-              <div className="grid grid-cols-4 gap-8 relative z-10">
+              <div className="grid grid-cols-6 gap-6 relative z-10">
                 {timelineEvents.map((event, index) => {
                   const Icon = event.icon;
                   return (
@@ -58,7 +58,7 @@ export default function Experience() {
                           ? { opacity: 1, y: 0 }
                           : {}
                       }
-                      transition={{ duration: 0.6, delay: 0.2 + index * 0.15 }}
+                      transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
                       className="flex flex-col items-center text-center"
                       data-testid={`container-timeline-${event.id}`}
                     >
@@ -66,22 +66,22 @@ export default function Experience() {
                         <Icon className="h-8 w-8 text-white" />
                       </div>
 
-                      <div className="text-2xl font-bold text-slate-900 mt-4 mb-6 relative z-20"
+                      <div className="text-xl font-bold text-slate-900 mt-3 relative z-20"
                         data-testid={`text-year-${event.id}`}
                       >
                         {event.year}
                       </div>
 
-                      <div className="mt-8 space-y-3">
+                      <div className="mt-12 space-y-2">
                         <div
-                          className="text-lg font-semibold text-slate-800"
+                          className="text-base font-semibold text-slate-800"
                           data-testid={`text-title-${event.id}`}
                         >
                           {event.title}
                         </div>
 
                         <p
-                          className="text-sm text-slate-700 leading-relaxed"
+                          className="text-xs text-slate-700 leading-relaxed"
                           data-testid={`text-description-${event.id}`}
                         >
                           {event.description}
