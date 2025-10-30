@@ -1,5 +1,6 @@
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-import robotVideo from "@assets/robo_1761797761018.webm";
+import robotVideoWebM from "@assets/robo_1761797761018.webm";
+import robotVideoHEVC from "@assets/robo_1761801209868.mov";
 
 export default function Robot() {
   const prefersReducedMotion = useReducedMotion();
@@ -13,7 +14,6 @@ export default function Robot() {
         data-testid="robot-animation"
       >
         <video
-          src={robotVideo}
           autoPlay
           loop
           muted
@@ -22,7 +22,10 @@ export default function Robot() {
           style={{ 
             filter: "drop-shadow(0 20px 25px rgba(0, 0, 0, 0.3))"
           }}
-        />
+        >
+          <source src={robotVideoHEVC} type='video/mp4; codecs="hvc1"' />
+          <source src={robotVideoWebM} type="video/webm" />
+        </video>
       </div>
     </div>
   );
