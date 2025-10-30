@@ -90,6 +90,7 @@ export default function Navbar() {
                   href={link.href}
                   onClick={(e) => handleClick(e, link.href)}
                   data-testid={`link-nav-${link.label.toLowerCase()}`}
+                  aria-current={activeSection === link.href ? "page" : undefined}
                   className={`px-4 py-2 text-sm font-medium transition-all hover-elevate rounded-md relative ${
                     activeSection === link.href
                       ? "text-white"
@@ -135,6 +136,7 @@ export default function Navbar() {
                   href={link.href}
                   onClick={(e) => handleClick(e, link.href)}
                   data-testid={`link-mobile-${link.label.toLowerCase()}`}
+                  aria-current={activeSection === link.href ? "page" : undefined}
                   className={`block px-4 py-3 rounded-md text-base font-medium transition-all hover-elevate ${
                     activeSection === link.href
                       ? "text-white bg-white/5"

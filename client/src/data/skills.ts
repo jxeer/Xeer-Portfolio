@@ -42,10 +42,20 @@ export const skills: Skill[] = [
   { id: "dotnet", title: ".NET", category: "backend", icon: "dotnet" },
   { id: "java", title: "Java", category: "backend", icon: "java" },
   { id: "nodejs", title: "Node.JS", category: "backend", icon: "nodejs" },
-  { id: "typescript", title: "TypeScript", category: "frontend", icon: "typescript" },
   { id: "php", title: "PHP", category: "backend", icon: "php" },
-  { id: "sqlserver", title: "SQL Server", category: "backend", icon: "sqlserver" },
-  { id: "mysql", title: "MySQL", category: "backend", icon: "mysql" },
-  { id: "postgresql", title: "PostgreSQL", category: "backend", icon: "postgresql" },
-  { id: "mongodb", title: "MongoDB", category: "backend", icon: "mongodb" },
+  
+  { id: "typescript", title: "TypeScript", category: "frontend", icon: "typescript" },
+  { id: "react", title: "React", category: "frontend", icon: "typescript" },
+  { id: "vue", title: "Vue.js", category: "frontend", icon: "typescript" },
+  { id: "tailwind", title: "Tailwind CSS", category: "frontend", icon: "typescript" },
+  
+  { id: "docker", title: "Docker", category: "devops", icon: "typescript" },
+  { id: "kubernetes", title: "Kubernetes", category: "devops", icon: "typescript" },
+  { id: "aws", title: "AWS", category: "devops", icon: "typescript" },
+  { id: "cicd", title: "CI/CD", category: "devops", icon: "typescript" },
+  
+  { id: "sqlserver", title: "SQL Server", category: "engineering", icon: "sqlserver" },
+  { id: "mysql", title: "MySQL", category: "engineering", icon: "mysql" },
+  { id: "postgresql", title: "PostgreSQL", category: "engineering", icon: "postgresql" },
+  { id: "mongodb", title: "MongoDB", category: "engineering", icon: "mongodb" },
 ];
