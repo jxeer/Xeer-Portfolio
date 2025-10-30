@@ -72,9 +72,9 @@ export default function Hero() {
         }}
       />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 py-24 lg:py-0 relative z-10">
         <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8 text-center lg:text-left">
+          <div className="space-y-8 pb-16 lg:pb-0 text-center lg:text-left">
             <div className="inline-block">
               <code
                 className="text-cyan-400 text-sm font-mono bg-white/10 backdrop-blur-sm px-3 py-1 rounded-md border border-white/20"
