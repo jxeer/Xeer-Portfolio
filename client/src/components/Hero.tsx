@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import Robot from "./Robot";
+import SectionArrow from "./SectionArrow";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export default function Hero() {
@@ -124,14 +125,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div
-        className={`absolute bottom-8 left-1/2 -translate-x-1/2 ${
-          prefersReducedMotion ? "" : "animate-bounce"
-        }`}
-        data-testid="icon-scroll-indicator"
-      >
-        <ArrowDown className="h-6 w-6 text-white/60" />
-      </div>
+      <SectionArrow targetSection="#about" />
     </section>
   );
 }

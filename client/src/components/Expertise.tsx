@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { skillCategories, skills } from "@/data/skills";
 import { Card } from "@/components/ui/card";
 import { Code } from "lucide-react";
+import SectionArrow from "./SectionArrow";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -32,7 +33,7 @@ export default function Expertise() {
   return (
     <section
       id="expertise"
-      className="py-24 md:py-32 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
+      className="relative py-24 md:py-32 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
       ref={ref}
     >
       <div className="container mx-auto px-6">
@@ -149,6 +150,7 @@ export default function Expertise() {
           </motion.div>
         </div>
       </div>
+      <SectionArrow targetSection="#projects" />
     </section>
   );
 }

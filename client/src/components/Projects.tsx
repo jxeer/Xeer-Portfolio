@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { ChevronLeft, ChevronRight, Github, Search, X } from "lucide-react";
+import SectionArrow from "./SectionArrow";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export default function Projects() {
@@ -303,6 +304,7 @@ export default function Projects() {
           </motion.div>
         )}
       </div>
+      <SectionArrow targetSection="#experience" />
     </section>
   );
 }

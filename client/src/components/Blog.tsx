@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, ChevronLeft, ChevronRight } from "lucide-react";
+import SectionArrow from "./SectionArrow";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 const POSTS_PER_PAGE = 6;
@@ -38,7 +39,7 @@ export default function Blog() {
   return (
     <section
       id="blog"
-      className="py-24 md:py-32 bg-white dark:bg-slate-950"
+      className="relative py-24 md:py-32 bg-white dark:bg-slate-950"
       ref={ref}
     >
       <div className="container mx-auto px-6">
@@ -185,6 +186,7 @@ export default function Blog() {
           Page {currentPage} of {totalPages} ({blogPosts.length} articles total)
         </div>
       </div>
+      <SectionArrow targetSection="#contact" />
     </section>
   );
 }

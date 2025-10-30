@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { timelineEvents } from "@/data/timeline";
+import SectionArrow from "./SectionArrow";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export default function Experience() {
@@ -139,6 +140,7 @@ export default function Experience() {
           </div>
         </div>
       </div>
+      <SectionArrow targetSection="#blog" />
     </section>
   );
 }

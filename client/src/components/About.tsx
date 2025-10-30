@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import SectionArrow from "./SectionArrow";
 import profileImage from "@assets/selfie-icon_1761795041032.jpg";
 
 export default function About() {
@@ -12,7 +13,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-24 md:py-32 bg-white dark:bg-slate-950"
+      className="relative py-24 md:py-32 bg-white dark:bg-slate-950"
       ref={ref}
     >
       <div className="container mx-auto px-6">
@@ -87,6 +88,7 @@ export default function About() {
           </motion.div>
         </motion.div>
       </div>
+      <SectionArrow targetSection="#expertise" />
     </section>
   );
 }
