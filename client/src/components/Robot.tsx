@@ -10,8 +10,12 @@ export default function Robot() {
   useEffect(() => {
     const userAgent = navigator.userAgent.toLowerCase();
     const isSafariBrowser = /^((?!chrome|android).)*safari/i.test(userAgent);
+    console.log("User Agent:", userAgent);
+    console.log("Is Safari:", isSafariBrowser);
     setIsSafari(isSafariBrowser);
   }, []);
+
+  console.log("Rendering with isSafari:", isSafari);
 
   return (
     <div className="relative w-full h-full flex items-center justify-center">
@@ -29,6 +33,7 @@ export default function Robot() {
             style={{ 
               filter: "drop-shadow(0 20px 25px rgba(0, 0, 0, 0.3))"
             }}
+            data-testid="robot-image-safari"
           />
         ) : (
           <video
@@ -40,6 +45,7 @@ export default function Robot() {
             style={{ 
               filter: "drop-shadow(0 20px 25px rgba(0, 0, 0, 0.3))"
             }}
+            data-testid="robot-video"
           >
             <source src={robotVideoWebM} type="video/webm" />
           </video>
