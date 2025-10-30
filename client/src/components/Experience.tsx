@@ -74,21 +74,19 @@ export default function Experience() {
                           {event.year}
                         </div>
                         <div
-                          className="text-lg font-semibold text-slate-800"
+                          className="text-lg font-semibold text-slate-800 bg-gradient-to-br from-brand-cyan via-cyan-500 to-blue-500 px-2"
                           data-testid={`text-title-${event.id}`}
                         >
                           {event.title}
                         </div>
                       </div>
 
-                      <div className="relative z-20 bg-gradient-to-br from-brand-cyan via-cyan-500 to-blue-500 px-2">
-                        <p
-                          className="text-sm text-slate-700 leading-relaxed"
-                          data-testid={`text-description-${event.id}`}
-                        >
-                          {event.description}
-                        </p>
-                      </div>
+                      <p
+                        className="text-sm text-slate-700 leading-relaxed relative z-20"
+                        data-testid={`text-description-${event.id}`}
+                      >
+                        {event.description}
+                      </p>
                     </motion.div>
                   );
                 })}

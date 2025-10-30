@@ -1,5 +1,5 @@
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-import robotImage from "@assets/pngtree-robot-typing-on-a-laptop-with-transparent-background-png-image_15146795_1761795228759.png";
+import robotImage from "@assets/robot_1761796179948.png";
 
 export default function Robot() {
   const prefersReducedMotion = useReducedMotion();
