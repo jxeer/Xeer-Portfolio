@@ -62,11 +62,11 @@ export default function Experience() {
                       className="flex flex-col items-center text-center"
                       data-testid={`container-timeline-${event.id}`}
                     >
-                      <div className="bg-slate-900 rounded-full w-16 h-16 flex items-center justify-center shadow-xl border-4 border-brand-cyan">
+                      <div className="bg-slate-900 rounded-full w-16 h-16 flex items-center justify-center shadow-xl border-4 border-brand-cyan relative z-20">
                         <Icon className="h-8 w-8 text-white" />
                       </div>
 
-                      <div className="space-y-2 mt-6 mb-4">
+                      <div className="space-y-2 mt-6 mb-4 relative z-20">
                         <div
                           className="text-2xl font-bold text-slate-900"
                           data-testid={`text-year-${event.id}`}
@@ -81,12 +81,14 @@ export default function Experience() {
                         </div>
                       </div>
 
-                      <p
-                        className="text-sm text-slate-700 leading-relaxed"
-                        data-testid={`text-description-${event.id}`}
-                      >
-                        {event.description}
-                      </p>
+                      <div className="relative z-20 bg-gradient-to-br from-brand-cyan via-cyan-500 to-blue-500 px-2">
+                        <p
+                          className="text-sm text-slate-700 leading-relaxed"
+                          data-testid={`text-description-${event.id}`}
+                        >
+                          {event.description}
+                        </p>
+                      </div>
                     </motion.div>
                   );
                 })}
