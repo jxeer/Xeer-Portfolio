@@ -62,11 +62,11 @@ export default function Experience() {
                       className="flex flex-col items-center text-center"
                       data-testid={`container-timeline-${event.id}`}
                     >
-                      <div className="bg-slate-900 rounded-full w-16 h-16 flex items-center justify-center mb-6 shadow-xl border-4 border-brand-cyan">
+                      <div className="bg-slate-900 rounded-full w-16 h-16 flex items-center justify-center shadow-xl border-4 border-brand-cyan">
                         <Icon className="h-8 w-8 text-white" />
                       </div>
 
-                      <div className="space-y-2 mb-4">
+                      <div className="space-y-2 mt-6 mb-4">
                         <div
                           className="text-2xl font-bold text-slate-900"
                           data-testid={`text-year-${event.id}`}
