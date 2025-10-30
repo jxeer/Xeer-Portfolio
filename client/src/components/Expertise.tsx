@@ -3,22 +3,9 @@ import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { skillCategories, skills } from "@/data/skills";
 import { Card } from "@/components/ui/card";
-import { Code } from "lucide-react";
+import { Code2 } from "lucide-react";
 import SectionArrow from "./SectionArrow";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  csharp: Code,
-  dotnet: Code,
-  java: Code,
-  nodejs: Code,
-  typescript: Code,
-  php: Code,
-  sqlserver: Code,
-  mysql: Code,
-  postgresql: Code,
-  mongodb: Code,
-};
 
 export default function Expertise() {
   const ref = useRef(null);
@@ -116,7 +103,6 @@ export default function Expertise() {
           >
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {filteredSkills.map((skill, index) => {
-                const SkillIcon = iconMap[skill.icon];
                 return (
                   <motion.div
                     key={skill.id}
@@ -136,9 +122,7 @@ export default function Expertise() {
                       className="bg-white dark:bg-slate-800 p-6 flex flex-col items-center justify-center gap-4 h-32 transition-all hover:-translate-y-2 hover:shadow-xl hover:ring-1 hover:ring-white/10 cursor-default"
                       data-testid={`card-skill-${skill.id}`}
                     >
-                      {SkillIcon && (
-                        <SkillIcon className="h-10 w-10 text-brand-indigo dark:text-brand-cyan" />
-                      )}
+                      <Code2 className="h-10 w-10 text-brand-indigo dark:text-brand-cyan" />
                       <span className="text-sm font-semibold text-gray-900 dark:text-white text-center">
                         {skill.title}
                       </span>
