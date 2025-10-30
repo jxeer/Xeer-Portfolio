@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { ChevronLeft, ChevronRight, Github, Search, X } from "lucide-react";
 import SectionArrow from "./SectionArrow";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import harmoniaScreenshot from "@assets/harmonia-screenshot.png";
 
 export default function Projects() {
   const ref = useRef(null);
@@ -182,15 +183,27 @@ export default function Projects() {
                   className="grid lg:grid-cols-2 gap-12 items-center bg-white/5 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/10"
                   data-testid={`container-project-${currentProject.id}`}
                 >
-                  <div className="bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl p-8 flex items-center justify-center min-h-[400px]">
-                    <div className="text-white/20 text-center">
-                      <div className="text-6xl font-bold mb-4">
-                        {currentProject.title}
+                  <div className="rounded-2xl overflow-hidden bg-white shadow-2xl">
+                    {currentProject.id === "arcade-atlas" && (
+                      <img
+                        src={harmoniaScreenshot}
+                        alt={currentProject.title}
+                        className="w-full h-full object-cover"
+                        data-testid={`img-project-${currentProject.id}`}
+                      />
+                    )}
+                    {currentProject.id !== "arcade-atlas" && (
+                      <div className="bg-gradient-to-br from-purple-600 to-pink-600 p-8 flex items-center justify-center min-h-[400px]">
+                        <div className="text-white/20 text-center">
+                          <div className="text-6xl font-bold mb-4">
+                            {currentProject.title}
+                          </div>
+                          <div className="text-2xl">
+                            Project Screenshot Placeholder
+                          </div>
+                        </div>
                       </div>
-                      <div className="text-2xl">
-                        Project Screenshot Placeholder
-                      </div>
-                    </div>
+                    )}
                   </div>
 
                   <div className="space-y-6">

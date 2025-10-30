@@ -77,7 +77,7 @@ export default function About() {
               </p>
 
               <p data-testid="text-about-philosophy">
-                Whether I'm writing the information-architecture for inclusive user interfaces, integrating data-driven tools for nonprofit operations, or leading cross-functional Web3 teams toward mission-aligned outcomes, I'll bring both creative vision and executional rigor to build technology that elevates your user experience.
+                Whether I'm writing the information-architecture for inclusive user interfaces, integrating data-driven tools for nonprofit operations, or leading cross-functional Web3 teams toward mission-aligned outcomes, I'll bring both creative vision and executional rigor to build technology that elevates your users experience.
               </p>
             </div>
           </motion.div>

@@ -14,7 +14,7 @@ export const timelineEvents: TimelineEvent[] = [
     id: "bootcamp",
     year: "2019",
     title: "General Assembly",
-    description: "I attended the General Assembly Winter Web Development Intensive, learning both front-end Javascript and React development, and backend SQL, PostGreSQL and Ruby-on-Rails. It was an immersive and life-changing experience",
+    description: "I attended the General Assembly Winter Web Development Intensive, learning both front-end HTML, CSS, Javascript and React, and backend SQL, PostGreSQL and Ruby-on-Rails. It was an immersive and life-changing experience!",
     icon: GraduationCap,
   },
   {

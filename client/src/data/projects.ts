@@ -10,12 +10,12 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "arcade-atlas",
-    title: "Arcade Atlas",
+    title: "Harmonia",
     description:
       "Android project for a game and stream search app. The goal of the project is to build a data visualizer for games. The app allows you to query data about games, search for games, and view the top Twitch streams for a given game. The data is obtained through the Twitch and IGDB APIs.",
     tags: ["Kotlin", "Android", "Jetpack Compose"],
     githubUrl: "https://github.com/julianxeer/arcade-atlas",
-    images: ["project-mobile-1", "project-mobile-2", "project-mobile-3"],
+    images: ["@assets/harmonia-screenshot.png"],
   },
   {
     id: "weather-track",
@@ -28,7 +28,7 @@ export const projects: Project[] = [
   },
   {
     id: "chat",
-    title: "Harmonia",
+    title: "Coral8",
     description:
       "Chat system with the functionality of creating chat rooms, inputting names, ages and choosing colors in the chat. This project does not use a database and it's a demo of the use of socket.io in projects using Node.JS on server-side and client-side.",
     tags: ["Node.JS", "Socket.IO"],
