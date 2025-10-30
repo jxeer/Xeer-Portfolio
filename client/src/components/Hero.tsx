@@ -35,14 +35,14 @@ export default function Hero() {
       role="banner"
     >
       <div
-        className="absolute inset-0 bg-gradient-to-br from-brand-teal via-brand-indigo to-brand-purple"
+        className="absolute inset-0 bg-gradient-to-br from-purple-900 via-fuchsia-900 to-teal-700"
         style={{
           transform: `translateY(${parallaxOffset}px)`,
         }}
       />
       
       <div
-        className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent"
+        className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/20 to-black/80"
         style={{
           transform: `translateY(${parallaxOffset}px)`,
         }}
@@ -53,7 +53,7 @@ export default function Hero() {
           <div className="space-y-8">
             <div className="inline-block">
               <code
-                className="text-brand-cyan text-sm font-mono bg-white/10 backdrop-blur-sm px-3 py-1 rounded-md border border-white/20"
+                className="text-cyan-400 text-sm font-mono bg-white/10 backdrop-blur-sm px-3 py-1 rounded-md border border-white/20"
                 data-testid="text-welcome-label"
               >
                 $. /welcome
@@ -76,7 +76,7 @@ export default function Hero() {
               <Button
                 onClick={handleViewProjects}
                 size="lg"
-                className="bg-white text-brand-indigo hover:bg-white/90 font-semibold px-8 hover-elevate active-elevate-2"
+                className="bg-white text-purple-900 hover:bg-white/90 font-semibold px-8 hover-elevate active-elevate-2"
                 data-testid="button-view-projects"
               >
                 View Projects

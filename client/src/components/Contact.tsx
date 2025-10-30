@@ -109,10 +109,10 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-24 md:py-32 bg-gradient-to-br from-slate-900 via-brand-indigo to-brand-purple dark:from-slate-950 dark:via-brand-indigo dark:to-brand-purple relative overflow-hidden"
+      className="py-24 md:py-32 bg-gradient-to-br from-purple-950 via-fuchsia-950 to-pink-950 relative overflow-hidden"
       ref={ref}
     >
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/40 to-black/70" />
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
@@ -220,7 +220,7 @@ export default function Contact() {
                     type="submit"
                     disabled={isSubmitting}
                     data-testid="button-submit"
-                    className="w-full bg-gradient-to-r from-brand-teal to-brand-cyan text-white font-semibold"
+                    className="w-full bg-gradient-to-r from-cyan-500 to-teal-500 text-white font-semibold"
                   >
                     {isSubmitting ? (
                       "Sending..."
@@ -277,7 +277,7 @@ export default function Contact() {
                     className="flex items-center gap-4 p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover-elevate active-elevate-2 transition-all"
                   >
                     <div className="bg-white rounded-full w-14 h-14 flex items-center justify-center flex-shrink-0">
-                      <Icon className="h-7 w-7 text-brand-indigo" />
+                      <Icon className="h-7 w-7 text-purple-900" />
                     </div>
                     <div className="text-left">
                       <span className="text-white font-semibold text-lg block">

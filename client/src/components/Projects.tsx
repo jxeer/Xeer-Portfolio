@@ -83,10 +83,10 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-24 md:py-32 bg-gradient-to-br from-brand-purple via-brand-indigo to-blue-600 dark:from-brand-purple dark:via-brand-indigo dark:to-blue-600 relative overflow-hidden"
+      className="py-24 md:py-32 bg-gradient-to-br from-indigo-950 via-purple-900 to-pink-900 relative overflow-hidden"
       ref={ref}
     >
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/30 to-black/60" />
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
@@ -137,7 +137,7 @@ export default function Projects() {
                   data-testid={`badge-filter-${tag.toLowerCase().replace(/\s+/g, "-")}`}
                   className={`cursor-pointer px-3 py-1 transition-all ${
                     selectedTags.includes(tag)
-                      ? "bg-white text-brand-indigo hover:bg-white/90"
+                      ? "bg-white text-purple-900 hover:bg-white/90"
                       : "bg-white/10 text-white border-white/20 hover:bg-white/20"
                   }`}
                 >
