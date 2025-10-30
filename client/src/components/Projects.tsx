@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { ChevronLeft, ChevronRight, Github, Search, X } from "lucide-react";
 import SectionArrow from "./SectionArrow";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-import harmoniaScreenshot from "@assets/harmonia-screenshot_1761859813389.png";
+import harmoniaScreenshot from "@assets/harmonia-screenshot_1761861772344.png";
 import mattereumScreenshot from "@assets/mattereum-screenshot_1761860021348.png";
 import coral8Screenshot from "@assets/coral8-screenshot_1761860913526.png";
 
