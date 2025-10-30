@@ -12,17 +12,17 @@ export interface TimelineEvent {
 export const timelineEvents: TimelineEvent[] = [
   {
     id: "bootcamp",
-    year: "1993",
+    year: "2019",
     title: "Coding Bootcamp",
-    description: "Started my journey in software development through an intensive coding bootcamp.",
+    description: "I attended the Winter Web Development Intensive, learning both front-end Javascript and React development, and backend SQL, PostGreSQL and Ruby-on-Rails. It was an immersive and life-changing experience",
     icon: Code2,
   },
   {
     id: "web-design",
-    year: "2004",
-    title: "Web Design",
+    year: "2019",
+    title: "Wakeful",
     description:
-      "My first contact with technology. A 1-year course focused on HTML 4, Dreamweaver, Fireworks, FrontPage, and other technologies that no longer exist. \\o/",
+      "Lead front-end development for a social media startup called Wakeful, whose mission was to connect holistic healing practitioners to clients and bring together alternative spiritual communities.",
     icon: GraduationCap,
   },
   {
