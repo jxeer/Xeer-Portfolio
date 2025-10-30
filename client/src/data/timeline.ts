@@ -11,11 +11,11 @@ export interface TimelineEvent {
 
 export const timelineEvents: TimelineEvent[] = [
   {
-    id: "born",
+    id: "bootcamp",
     year: "1993",
-    title: "Born",
-    description: "Born somewhere in Brazil a few days ago.",
-    icon: Star,
+    title: "Coding Bootcamp",
+    description: "Started my journey in software development through an intensive coding bootcamp.",
+    icon: Code2,
   },
   {
     id: "web-design",

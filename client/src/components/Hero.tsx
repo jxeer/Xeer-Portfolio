@@ -93,7 +93,7 @@ export default function Hero() {
                 Hi, I'm <span className="whitespace-nowrap">Julian Xeer</span>
               </h1>
               <p className="text-2xl md:text-3xl text-white/90 font-display font-medium">
-                Full Stack Developer
+                Web Developer & Designer
               </p>
             </div>
 

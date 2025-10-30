@@ -62,27 +62,22 @@ export default function About() {
 
             <div className="space-y-4 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
               <p data-testid="text-about-intro">
-                I'm Julian Xeer, a full stack developer and creative technologist based
+                I'm Julian Xeer, a Web Developer & Designer based
                 in New York City.
               </p>
 
-              <p data-testid="text-about-experience">
-                I enjoy working on high-impact projects that I believe will shape the
-                future of the web and the world.
-              </p>
-
               <p data-testid="text-about-background">
-                I love creating digital platforms for artists, musicians, non-profits, educators, small businesses, and spiritual practitioners—helping people and organizations share their message with the world. 
+                I love creating websites and apps for artists, musicians, non-profits, educators, small businesses, and spiritual practitioners—helping people and organizations share their message with the world. 
               </p>
 
               <p data-testid="text-about-education">
-                Blending design, storytelling, and technology, I can turn ideas into meaningful digital experiences that empower communities and support social change and holistic evolution.
+                Blending design, storytelling, and technology, I can turn your ideas into meaningful digital experiences that can empower your   communities and support social change.
 
 
               </p>
 
               <p data-testid="text-about-philosophy">
-                Whether architecting inclusive user interfaces, integrating data-driven tools for nonprofit operations, or leading cross-functional Web3   teams toward mission-aligned outcomes, Julian brings both creative vision and executional rigor to build technology that empowers communities and elevates the user experience.
+                Whether I'm writing the information-architecture for inclusive user interfaces, integrating data-driven tools for nonprofit operations, or leading cross-functional Web3 teams toward mission-aligned outcomes, I'll bring both creative vision and executional rigor to build technology that elevates your user experience.
               </p>
             </div>
           </motion.div>
