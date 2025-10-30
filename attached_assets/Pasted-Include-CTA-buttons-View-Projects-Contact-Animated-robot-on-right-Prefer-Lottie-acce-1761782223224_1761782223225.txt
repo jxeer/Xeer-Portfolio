@@ -1,0 +1,69 @@
+Include CTA buttons: “View Projects”, “Contact”.
+
+	•	Animated robot on right:
+	•	Prefer Lottie (accept a robot.json placeholder). If no Lottie, create a fallback: a PNG/SVG that gently floats (translateY) and blinks via CSS keyframes (10–12s loop, easing, subtle).
+	•	Ensure animation pauses with prefers-reduced-motion.
+	•	Slight parallax: background gradient moves slower than content on scroll.
+
+B) About
+	•	Two-column layout: left = portrait image (square with rounded corners, subtle border), right = heading “About me” and 3–5 short paragraphs (placeholder text).
+	•	Maintain a wide left margin and airy whitespace similar to the screenshot.
+	•	On mobile, stack image above text.
+
+C) Expertise
+	•	Left column: vertical category pills (Back-end, Front-end, DevOps, Engineering) as tall rounded tiles with icons.
+	•	Right grid: skill cards (C#, .NET, Java, Node.js, TypeScript, PHP, SQL Server, MySQL, PostgreSQL, MongoDB…). Each is a white/light card on dark background with icon, title, subtle shadow; hover = lift + outline.
+	•	Use a simple data array to render categories/skills.
+
+D) Projects (carousel or stacked feature panels)
+	•	Recreate the showcase panel look:
+	•	Left: large mock images (e.g., 3 phones for a mobile app) on a purple gradient slab.
+	•	Right: project title, 2–3 sentence description, tech tag chips (e.g., Kotlin, Android, Jetpack Compose), and a “View on GitHub” button (outline style with icon).
+	•	Include at least three example projects (e.g., “Arcade Atlas”, “Weather Track”, “Chat”) with varied mock imagery.
+	•	Provide a small prev/next control or dot nav (Framer Motion fade/slide between projects is a plus; honor reduced motion).
+
+E) Experience (timeline)
+	•	Wide horizontal timeline row with 4–6 milestones (icon circles connected by a line), each with year | title and a short paragraph underneath (as in the screenshot).
+	•	Keep the bright cyan panel background with dark text/icons; maintain big airy padding.
+
+F) Contact
+	•	Big heading “Let’s Connect”.
+	•	Three large circular icon buttons centered: LinkedIn, Email, GitHub. White circles on dark gradient; hover adds glow/ring.
+	•	Each opens a placeholder link.
+
+3) Animations & polish
+	•	Section reveal on scroll (fade-up, 80px translate; staggered children).
+	•	Buttons: subtle scale/shadow on hover.
+	•	Cards: hover lift + outline (ring-1 ring-white/10).
+	•	Smooth scroll for in-page anchor links.
+
+4) File structure & data
+	•	src/components/:
+	•	Navbar.tsx, Hero.tsx, About.tsx, Expertise.tsx, Projects.tsx, Experience.tsx, Contact.tsx, Footer.tsx.
+	•	Robot.tsx (handles Lottie and CSS-fallback animation).
+	•	SectionHeading.tsx (shared styled heading).
+	•	src/data/:
+	•	skills.ts (categories + skills array with title, icon, category).
+	•	projects.ts (title, description, tags[], githubUrl, images[])
+	•	timeline.ts (year, title, text, icon).
+	•	src/assets/:
+	•	Placeholder images for portrait and project mockups; robot.json Lottie placeholder; SVG skill icons.
+	•	src/App.tsx wires sections; src/main.tsx bootstraps.
+	•	Tailwind config with container widths and brand colors:
+	•	brand.teal = #0f9ba8, brand.indigo = #4b5bdc, brand.purple = #6a31d9, brand.cyan = #12b2d6 (adjust as needed).
+
+5) Acceptance criteria
+	•	Running npm i && npm run dev shows the full page with:
+	•	Sticky nav + active link highlighting on scroll.
+	•	Hero with animated robot (Lottie if present; CSS float/blink fallback).
+	•	About two-column layout.
+	•	Expertise with left category tiles + right skill cards grid.
+	•	At least 3 project panels with gradient panels and tag chips + GitHub button.
+	•	Cyan experience timeline with 4–6 milestones.
+	•	Contact section with 3 large circle icons.
+	•	Smooth scrolling and scroll-reveal animations, all responsive.
+	•	No TypeScript/ESLint errors; components cleanly separated; all content driven from src/data/* where sensible.
+
+6) After generation
+	•	Output: brief README with how to swap the robot animation, change colors/fonts, and add projects.
+	•	Include comments where I should replace placeholder assets and copy.
