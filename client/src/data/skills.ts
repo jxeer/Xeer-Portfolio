@@ -18,12 +18,12 @@ export const skillCategories: SkillCategory[] = [
   {
     id: "backend",
     title: "Back-end",
-    icon: Server,
+    icon: Code2,
   },
   {
     id: "frontend",
     title: "Front-end",
-    icon: Paintbrush,
+    icon: Code2,
   },
   {
     id: "devops",
@@ -33,7 +33,7 @@ export const skillCategories: SkillCategory[] = [
   {
     id: "web3",
     title: "Web3",
-    icon: Cpu,
+    icon: Code2,
   },
 ];
 
