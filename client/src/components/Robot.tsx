@@ -16,7 +16,10 @@ export default function Robot() {
           src={robotImage}
           alt="Robot sitting at desk typing on laptop"
           className="w-full h-auto"
-          style={{ filter: "drop-shadow(0 20px 25px rgba(0, 0, 0, 0.3))" }}
+          style={{ 
+            filter: "drop-shadow(0 20px 25px rgba(0, 0, 0, 0.3))",
+            mixBlendMode: "multiply"
+          }}
         />
       </div>
     </div>
