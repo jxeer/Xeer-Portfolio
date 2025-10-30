@@ -1,5 +1,5 @@
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-import robotImage from "@assets/generated_images/Professional_robot_at_desk_d5475fcc.png";
+import robotImage from "@assets/robot_1761794948050.png";
 
 export default function Robot() {
   const prefersReducedMotion = useReducedMotion();
@@ -14,11 +14,10 @@ export default function Robot() {
       >
         <img
           src={robotImage}
-          alt="Robot sitting at desk typing on laptop"
+          alt="Robot sitting with laptop"
           className="w-full h-auto"
           style={{ 
-            filter: "drop-shadow(0 20px 25px rgba(0, 0, 0, 0.3))",
-            mixBlendMode: "multiply"
+            filter: "drop-shadow(0 20px 25px rgba(0, 0, 0, 0.3))"
           }}
         />
       </div>
