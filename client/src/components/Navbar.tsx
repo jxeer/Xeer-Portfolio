@@ -47,6 +47,8 @@ export default function Navbar() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
       setIsMenuOpen(false);
+      // Update URL hash for deep-linking support
+      window.history.pushState(null, '', href);
     }
   };
 

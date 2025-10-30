@@ -93,7 +93,10 @@ export default function Blog() {
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-display font-bold text-gray-900 dark:text-white mb-3 line-clamp-2">
+                  <h3 
+                    className="text-xl font-display font-bold text-gray-900 dark:text-white mb-3 line-clamp-2"
+                    data-testid={`text-blog-title-${post.id}`}
+                  >
                     {post.title}
                   </h3>
 
