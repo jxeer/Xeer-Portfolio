@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const navLinks = [
   { href: "#about", label: "About" },
   { href: "#expertise", label: "Expertise" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
+  { href: "#blog", label: "Blog" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -61,7 +63,7 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-slate-950/80 backdrop-blur-md border-b border-white/10"
+            ? "bg-slate-950/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-white/10 dark:border-white/10"
             : "bg-transparent"
         }`}
         role="navigation"
@@ -93,8 +95,8 @@ export default function Navbar() {
                   aria-current={activeSection === link.href ? "page" : undefined}
                   className={`px-4 py-2 text-sm font-medium transition-all hover-elevate rounded-md relative ${
                     activeSection === link.href
-                      ? "text-white"
-                      : "text-gray-300"
+                      ? "text-white dark:text-white"
+                      : "text-gray-300 dark:text-gray-300"
                   }`}
                 >
                   {link.label}
@@ -103,9 +105,11 @@ export default function Navbar() {
                   )}
                 </a>
               ))}
+              <ThemeToggle />
             </div>
 
-            <div className="md:hidden">
+            <div className="md:hidden flex items-center gap-2">
+              <ThemeToggle />
               <Button
                 variant="ghost"
                 size="icon"

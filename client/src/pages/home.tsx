@@ -4,12 +4,13 @@ import About from "@/components/About";
 import Expertise from "@/components/Expertise";
 import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
+import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="min-h-screen bg-slate-950 dark:bg-slate-950">
       <Navbar />
       <main id="main">
         <Hero />
@@ -17,6 +18,7 @@ export default function Home() {
         <Expertise />
         <Projects />
         <Experience />
+        <Blog />
         <Contact />
       </main>
       <Footer />
