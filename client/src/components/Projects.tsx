@@ -10,6 +10,7 @@ import SectionArrow from "./SectionArrow";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import harmoniaScreenshot from "@assets/harmonia-screenshot_1761859813389.png";
 import mattereumScreenshot from "@assets/mattereum-screenshot_1761860021348.png";
+import coral8Screenshot from "@assets/coral8-screenshot_1761860913526.png";
 
 export default function Projects() {
   const ref = useRef(null);
@@ -201,7 +202,15 @@ export default function Projects() {
                         data-testid={`img-project-${currentProject.id}`}
                       />
                     )}
-                    {currentProject.id !== "arcade-atlas" && currentProject.id !== "weather-track" && (
+                    {currentProject.id === "chat" && (
+                      <img
+                        src={coral8Screenshot}
+                        alt={currentProject.title}
+                        className="w-full h-full object-cover"
+                        data-testid={`img-project-${currentProject.id}`}
+                      />
+                    )}
+                    {currentProject.id !== "arcade-atlas" && currentProject.id !== "weather-track" && currentProject.id !== "chat" && (
                       <div className="bg-gradient-to-br from-purple-600 to-pink-600 p-8 flex items-center justify-center min-h-[400px]">
                         <div className="text-white/20 text-center">
                           <div className="text-6xl font-bold mb-4">
