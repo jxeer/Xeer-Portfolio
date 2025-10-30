@@ -9,7 +9,7 @@ import { ChevronLeft, ChevronRight, Github, Search, X } from "lucide-react";
 import SectionArrow from "./SectionArrow";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import harmoniaScreenshot from "@assets/harmonia-screenshot_1761859813389.png";
-import mattereumScreenshot from "@assets/mattereum-screenshot_1761859889388.png";
+import mattereumScreenshot from "@assets/mattereum-screenshot_1761860021348.png";
 
 export default function Projects() {
   const ref = useRef(null);
