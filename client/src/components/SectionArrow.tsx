@@ -19,17 +19,19 @@ export default function SectionArrow({ targetSection, variant = "dark" }: Sectio
   const isDark = variant === "dark";
 
   return (
-    <button
-      onClick={handleClick}
-      className={`absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer backdrop-blur-sm border-none p-3 rounded-full transition-all z-50 ${
-        isDark 
-          ? "bg-white/10 hover:bg-white/20" 
-          : "bg-gray-900/10 dark:bg-white/10 hover:bg-gray-900/20 dark:hover:bg-white/20"
-      } ${prefersReducedMotion ? "" : "animate-bounce"}`}
-      data-testid={`button-scroll-to-${targetSection.replace('#', '')}`}
-      aria-label={`Scroll to ${targetSection.replace('#', '')} section`}
-    >
-      <ArrowDown className={`h-6 w-6 ${isDark ? "text-white" : "text-gray-900 dark:text-white"}`} />
-    </button>
+    <div className="absolute bottom-4 left-0 right-0 flex justify-center z-50 pointer-events-none">
+      <button
+        onClick={handleClick}
+        className={`cursor-pointer backdrop-blur-sm border-none p-3 rounded-full transition-all pointer-events-auto ${
+          isDark 
+            ? "bg-white/10 hover:bg-white/20" 
+            : "bg-gray-900/10 dark:bg-white/10 hover:bg-gray-900/20 dark:hover:bg-white/20"
+        } ${prefersReducedMotion ? "" : "animate-bounce"}`}
+        data-testid={`button-scroll-to-${targetSection.replace('#', '')}`}
+        aria-label={`Scroll to ${targetSection.replace('#', '')} section`}
+      >
+        <ArrowDown className={`h-6 w-6 ${isDark ? "text-white" : "text-gray-900 dark:text-white"}`} />
+      </button>
+    </div>
   );
 }
