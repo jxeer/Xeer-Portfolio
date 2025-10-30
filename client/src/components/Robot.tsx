@@ -1,4 +1,5 @@
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import robotImage from "@assets/robot-at-desk.png";
 
 export default function Robot() {
   const prefersReducedMotion = useReducedMotion();
@@ -11,9 +12,10 @@ export default function Robot() {
         }`}
       >
         <img
-          src="/attached_assets/Screenshot 2025-10-29 at 10.43.05 PM_1761792196606.png"
+          src={robotImage}
           alt="Robot sitting at desk typing on laptop"
           className="w-full h-auto drop-shadow-2xl"
+          data-testid="img-robot"
         />
       </div>
     </div>
