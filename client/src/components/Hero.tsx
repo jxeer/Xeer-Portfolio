@@ -35,15 +35,38 @@ export default function Hero() {
       role="banner"
     >
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 bg-black"
         style={{
-          background: 'radial-gradient(circle at center, rgb(139, 92, 246) 0%, rgb(126, 34, 206) 15%, rgb(88, 28, 135) 25%, rgb(190, 24, 93) 45%, rgb(136, 19, 55) 65%, rgb(17, 24, 39) 100%)',
           transform: `translateY(${parallaxOffset}px)`,
         }}
       />
       
       <div
-        className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/40 to-black/90"
+        className="absolute inset-0"
+        style={{
+          background: 'radial-gradient(circle at 20% 30%, rgb(139, 92, 246) 0%, transparent 40%)',
+          transform: `translateY(${parallaxOffset}px)`,
+        }}
+      />
+      
+      <div
+        className="absolute inset-0"
+        style={{
+          background: 'radial-gradient(circle at 70% 60%, rgb(190, 24, 93) 0%, transparent 35%)',
+          transform: `translateY(${parallaxOffset}px)`,
+        }}
+      />
+      
+      <div
+        className="absolute inset-0"
+        style={{
+          background: 'radial-gradient(circle at 50% 80%, rgb(126, 34, 206) 0%, transparent 30%)',
+          transform: `translateY(${parallaxOffset}px)`,
+        }}
+      />
+
+      <div
+        className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/30 to-black/70"
         style={{
           transform: `translateY(${parallaxOffset}px)`,
         }}
