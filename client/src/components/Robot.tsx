@@ -1,7 +1,7 @@
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useState, useEffect } from "react";
 import robotVideoWebM from "@assets/robo_1761797761018.webm";
-import robotStaticPNG from "@assets/robo_static.png";
+import robotAlphaPNG from "@assets/robo_alpha.png";
 
 export default function Robot() {
   const prefersReducedMotion = useReducedMotion();
@@ -10,12 +10,8 @@ export default function Robot() {
   useEffect(() => {
     const userAgent = navigator.userAgent.toLowerCase();
     const isSafariBrowser = /^((?!chrome|android).)*safari/i.test(userAgent);
-    console.log("User Agent:", userAgent);
-    console.log("Is Safari:", isSafariBrowser);
     setIsSafari(isSafariBrowser);
   }, []);
-
-  console.log("Rendering with isSafari:", isSafari);
 
   return (
     <div className="relative w-full h-full flex items-center justify-center">
@@ -27,7 +23,7 @@ export default function Robot() {
       >
         {isSafari ? (
           <img
-            src={robotStaticPNG}
+            src={robotAlphaPNG}
             alt="Robot developer"
             className="w-full h-auto"
             style={{ 
