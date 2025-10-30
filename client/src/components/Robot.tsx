@@ -1,5 +1,5 @@
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-import robotImage from "@assets/robot_1761796179948.png";
+import robotVideo from "@assets/robo_1761797761018.webm";
 
 export default function Robot() {
   const prefersReducedMotion = useReducedMotion();
@@ -12,9 +12,12 @@ export default function Robot() {
         }`}
         data-testid="robot-animation"
       >
-        <img
-          src={robotImage}
-          alt="Robot typing on laptop"
+        <video
+          src={robotVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-auto"
           style={{ 
             filter: "drop-shadow(0 20px 25px rgba(0, 0, 0, 0.3))"
