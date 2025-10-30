@@ -1,5 +1,6 @@
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-import robotImage from "@assets/generated_images/Robot_at_desk_transparent_e5505806.png";
+import Lottie from "lottie-react";
+import robotAnimation from "@/assets/animations/robot-typing.json";
 
 export default function Robot() {
   const prefersReducedMotion = useReducedMotion();
@@ -10,12 +11,17 @@ export default function Robot() {
         className={`relative w-full max-w-[500px] ${
           prefersReducedMotion ? "" : "animate-float"
         }`}
+        data-testid="robot-animation"
       >
-        <img
-          src={robotImage}
-          alt="Robot sitting at desk typing on laptop"
-          className="w-full h-auto drop-shadow-2xl"
-          data-testid="img-robot"
+        <Lottie
+          animationData={robotAnimation}
+          loop={true}
+          autoplay={!prefersReducedMotion}
+          style={{
+            width: "100%",
+            height: "auto",
+            filter: "drop-shadow(0 20px 25px rgba(0, 0, 0, 0.3))",
+          }}
         />
       </div>
     </div>
