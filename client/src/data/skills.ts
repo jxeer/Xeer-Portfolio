@@ -31,31 +31,29 @@ export const skillCategories: SkillCategory[] = [
     icon: Code2,
   },
   {
-    id: "engineering",
-    title: "Engineering",
+    id: "web3",
+    title: "Web3",
     icon: Cpu,
   },
 ];
 
 export const skills: Skill[] = [
-  { id: "csharp", title: "C#", category: "backend", icon: "csharp" },
-  { id: "dotnet", title: ".NET", category: "backend", icon: "dotnet" },
-  { id: "java", title: "Java", category: "backend", icon: "java" },
-  { id: "nodejs", title: "Node.JS", category: "backend", icon: "nodejs" },
-  { id: "php", title: "PHP", category: "backend", icon: "php" },
+  { id: "nodejs", title: "Node.js", category: "backend", icon: "nodejs" },
+  { id: "mysql", title: "MySQL", category: "backend", icon: "mysql" },
+  { id: "postgresql", title: "PostgreSQL", category: "backend", icon: "postgresql" },
+  { id: "ruby", title: "Ruby", category: "backend", icon: "ruby" },
+  { id: "rails", title: "Ruby-on-Rails", category: "backend", icon: "ruby" },
   
-  { id: "typescript", title: "TypeScript", category: "frontend", icon: "typescript" },
-  { id: "react", title: "React", category: "frontend", icon: "typescript" },
-  { id: "vue", title: "Vue.js", category: "frontend", icon: "typescript" },
-  { id: "tailwind", title: "Tailwind CSS", category: "frontend", icon: "typescript" },
+  { id: "html", title: "HTML", category: "frontend", icon: "html" },
+  { id: "css", title: "CSS", category: "frontend", icon: "css" },
+  { id: "javascript", title: "Javascript", category: "frontend", icon: "javascript" },
+  { id: "react", title: "React", category: "frontend", icon: "react" },
+  { id: "typescript", title: "Typescript", category: "frontend", icon: "typescript" },
+  { id: "tailwind", title: "Tailwind CSS", category: "frontend", icon: "tailwind" },
   
-  { id: "docker", title: "Docker", category: "devops", icon: "typescript" },
-  { id: "kubernetes", title: "Kubernetes", category: "devops", icon: "typescript" },
-  { id: "aws", title: "AWS", category: "devops", icon: "typescript" },
-  { id: "cicd", title: "CI/CD", category: "devops", icon: "typescript" },
+  { id: "aws", title: "AWS", category: "devops", icon: "aws" },
+  { id: "cicd", title: "CI/CD", category: "devops", icon: "cicd" },
+  { id: "docker", title: "Docker", category: "devops", icon: "docker" },
   
-  { id: "sqlserver", title: "SQL Server", category: "engineering", icon: "sqlserver" },
-  { id: "mysql", title: "MySQL", category: "engineering", icon: "mysql" },
-  { id: "postgresql", title: "PostgreSQL", category: "engineering", icon: "postgresql" },
-  { id: "mongodb", title: "MongoDB", category: "engineering", icon: "mongodb" },
+  { id: "solidity", title: "Solidity", category: "web3", icon: "solidity" },
 ];
