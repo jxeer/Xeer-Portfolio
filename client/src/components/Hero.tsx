@@ -118,7 +118,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="hidden lg:flex items-center justify-center">
+          <div className="flex items-center justify-center">
             <Robot />
           </div>
         </div>
