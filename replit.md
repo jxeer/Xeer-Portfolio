@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a modern, single-page portfolio website showcasing Julian Xeer's work as a Full Stack Developer. The application features a dark gradient theme (teal → indigo → purple), smooth scroll-based animations, and a fully responsive design. Built as a static single-page application with multiple sections including hero, about, expertise, projects, experience timeline, and contact.
+This is a modern, single-page portfolio website showcasing Julian Xeer's work as a Full Stack Developer. The application features a dark gradient theme (teal → indigo → purple), smooth scroll-based animations, and a fully responsive design. Built as a static single-page application with multiple sections including hero, about, expertise, projects, experience timeline, freelance services, and contact.
 
 **Tech Stack:**
 - Frontend: React 18 with TypeScript
@@ -25,7 +25,7 @@ Preferred communication style: Simple, everyday language.
 - Single-page application with section-based navigation
 - Components organized into:
   - **Page Components** (`client/src/pages/`): Home page and 404 handler
-  - **Feature Components** (`client/src/components/`): Navbar, Hero, About, Expertise, Projects, Experience, Contact, Footer, Robot
+  - **Feature Components** (`client/src/components/`): Navbar, Hero, About, Expertise, Projects, Experience, Services, Contact, Footer, Robot
   - **UI Components** (`client/src/components/ui/`): Reusable shadcn/ui components built on Radix UI primitives
 
 **State Management:**
@@ -77,14 +77,16 @@ Preferred communication style: Simple, everyday language.
 
 **Static Data Sources:**
 - `client/src/data/skills.ts`: Skill categories and individual skills with categorization
-- `client/src/data/projects.ts`: Project showcase data (title, description, tags, GitHub links, images)
+- `client/src/data/projects.ts`: Project showcase data (title, description, tags, GitHub links, actual project screenshots)
 - `client/src/data/timeline.ts`: Career timeline/experience milestones
+- `client/src/data/services.ts`: Freelance service offerings (title, description, price range, target clients)
 
 **Data Flow:**
 - Static data imported directly into components
 - No API calls in current implementation
-- Projects carousel cycles through static project array
-- Expertise section filters skills based on selected category
+- Projects carousel cycles through static project array with actual screenshots (Harmonia, Mattereum, Coral8)
+- Expertise section filters skills based on selected category (uses Code2 icon for all categories)
+- Services section displays freelance offerings in paginated grid layout with price ranges and target client badges
 
 ### Accessibility Features
 
