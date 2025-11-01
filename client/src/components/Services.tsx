@@ -33,14 +33,18 @@ export default function Services() {
   const goToNextPage = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
-      document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" });
+      document
+        .querySelector("#services")
+        ?.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const goToPreviousPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
-      document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" });
+      document
+        .querySelector("#services")
+        ?.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -57,11 +61,7 @@ export default function Services() {
         <motion.div
           initial={prefersReducedMotion ? {} : { opacity: 0, y: 80 }}
           animate={
-            prefersReducedMotion
-              ? {}
-              : isInView
-              ? { opacity: 1, y: 0 }
-              : {}
+            prefersReducedMotion ? {} : isInView ? { opacity: 1, y: 0 } : {}
           }
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
@@ -73,7 +73,8 @@ export default function Services() {
             Freelance Services
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Insights on web development, best practices, and tech trends
+            From landing pages to full-scale platforms — I'm happy to build
+            professional web solutions your goals.
           </p>
         </motion.div>
 
@@ -83,21 +84,17 @@ export default function Services() {
               key={service.id}
               initial={prefersReducedMotion ? {} : { opacity: 0, y: 50 }}
               animate={
-                prefersReducedMotion
-                  ? {}
-                  : isInView
-                  ? { opacity: 1, y: 0 }
-                  : {}
+                prefersReducedMotion ? {} : isInView ? { opacity: 1, y: 0 } : {}
               }
               transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
               data-testid={`card-service-${service.id}`}
             >
-              <Card 
+              <Card
                 className="h-full flex flex-col overflow-hidden bg-white/5 backdrop-blur-sm border-white/10 hover:-translate-y-2 transition-all duration-300 cursor-pointer hover:shadow-xl hover:shadow-cyan-500/10"
                 onClick={() => setSelectedService(service)}
               >
                 <div className="p-6 flex flex-col flex-1">
-                  <h3 
+                  <h3
                     className="text-xl font-display font-bold text-white mb-3 line-clamp-2"
                     data-testid={`text-service-title-${service.id}`}
                   >
@@ -119,7 +116,7 @@ export default function Services() {
                         key={client}
                         variant="secondary"
                         className="text-xs bg-white/10 text-gray-300 border-white/20 hover:bg-white/20"
-                        data-testid={`badge-client-${client.toLowerCase().replace(/\s+/g, '-')}`}
+                        data-testid={`badge-client-${client.toLowerCase().replace(/\s+/g, "-")}`}
                       >
                         {client}
                       </Badge>
@@ -135,11 +132,7 @@ export default function Services() {
           <motion.div
             initial={prefersReducedMotion ? {} : { opacity: 0, y: 20 }}
             animate={
-              prefersReducedMotion
-                ? {}
-                : isInView
-                ? { opacity: 1, y: 0 }
-                : {}
+              prefersReducedMotion ? {} : isInView ? { opacity: 1, y: 0 } : {}
             }
             transition={{ duration: 0.4, delay: 0.6 }}
             className="flex items-center justify-center gap-4"
@@ -178,7 +171,7 @@ export default function Services() {
                   >
                     {page}
                   </Button>
-                )
+                ),
               )}
             </div>
 
@@ -198,12 +191,16 @@ export default function Services() {
 
         {totalPages > 1 && (
           <div className="text-center mt-8 text-sm text-gray-400">
-            Page {currentPage} of {totalPages} ({services.length} services total)
+            Page {currentPage} of {totalPages} ({services.length} services
+            total)
           </div>
         )}
       </div>
 
-      <Dialog open={!!selectedService} onOpenChange={() => setSelectedService(null)}>
+      <Dialog
+        open={!!selectedService}
+        onOpenChange={() => setSelectedService(null)}
+      >
         <DialogContent className="max-w-2xl bg-slate-900 border-white/10 text-white">
           <DialogHeader>
             <DialogTitle className="text-2xl md:text-3xl font-display font-bold text-white mb-2">
@@ -218,14 +215,16 @@ export default function Services() {
             {selectedService?.description}
           </DialogDescription>
           <div className="mt-6">
-            <p className="text-sm font-medium text-gray-400 mb-3">Perfect for:</p>
+            <p className="text-sm font-medium text-gray-400 mb-3">
+              Perfect for:
+            </p>
             <div className="flex flex-wrap gap-2">
               {selectedService?.targetClients.map((client) => (
                 <Badge
                   key={client}
                   variant="secondary"
                   className="bg-white/10 text-gray-300 border-white/20"
-                  data-testid={`badge-modal-client-${client.toLowerCase().replace(/\s+/g, '-')}`}
+                  data-testid={`badge-modal-client-${client.toLowerCase().replace(/\s+/g, "-")}`}
                 >
                   {client}
                 </Badge>
@@ -236,7 +235,9 @@ export default function Services() {
             <Button
               onClick={() => {
                 setSelectedService(null);
-                document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+                document
+                  .querySelector("#contact")
+                  ?.scrollIntoView({ behavior: "smooth" });
               }}
               className="w-full bg-cyan-500 hover:bg-cyan-600 text-white"
               data-testid="button-contact-service"
