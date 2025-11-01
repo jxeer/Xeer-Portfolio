@@ -73,8 +73,7 @@ export default function Services() {
             Freelance Services
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            I'm happy to build
-            professional web solutions your goals.
+            I'm happy to build professional web solutions for your goals.
           </p>
         </motion.div>
 
