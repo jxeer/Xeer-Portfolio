@@ -86,21 +86,21 @@ export default function Contact() {
     {
       id: "linkedin",
       icon: Linkedin,
-      href: "https://linkedin.com/in/julianxeer",
+      href: "https://www.linkedin.com/in/julianxeer/",
       label: "LinkedIn",
       ariaLabel: "Connect on LinkedIn",
     },
     {
       id: "github",
       icon: Github,
-      href: "https://github.com/julianxeer",
+      href: "https://github.com/jxeer",
       label: "GitHub",
       ariaLabel: "View GitHub profile",
     },
     {
       id: "email",
       icon: Mail,
-      href: "mailto:julian@example.com",
+      href: "mailto:julian.xeer@gmail.com",
       label: "Email",
       ariaLabel: "Send an email",
     },
@@ -286,7 +286,7 @@ export default function Contact() {
                       <span className="text-white/70 text-sm">
                         {link.id === "linkedin" && "Let's connect"}
                         {link.id === "github" && "View my code"}
-                        {link.id === "email" && "julian@example.com"}
+                        {link.id === "email" && "julian.xeer@gmail.com"}
                       </span>
                     </div>
                   </motion.a>
