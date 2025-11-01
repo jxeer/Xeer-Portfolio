@@ -1,10 +1,17 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { services } from "@/data/services";
+import { services, type Service } from "@/data/services";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { DollarSign, ChevronLeft, ChevronRight } from "lucide-react";
 import SectionArrow from "./SectionArrow";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
@@ -16,6 +23,7 @@ export default function Services() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const prefersReducedMotion = useReducedMotion();
   const [currentPage, setCurrentPage] = useState(1);
+  const [selectedService, setSelectedService] = useState<Service | null>(null);
 
   const totalPages = Math.ceil(services.length / SERVICES_PER_PAGE);
   const startIndex = (currentPage - 1) * SERVICES_PER_PAGE;
@@ -84,7 +92,10 @@ export default function Services() {
               transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
               data-testid={`card-service-${service.id}`}
             >
-              <Card className="h-full flex flex-col overflow-hidden bg-white/5 backdrop-blur-sm border-white/10 hover:-translate-y-2 transition-all duration-300 cursor-pointer hover:shadow-xl hover:shadow-cyan-500/10">
+              <Card 
+                className="h-full flex flex-col overflow-hidden bg-white/5 backdrop-blur-sm border-white/10 hover:-translate-y-2 transition-all duration-300 cursor-pointer hover:shadow-xl hover:shadow-cyan-500/10"
+                onClick={() => setSelectedService(service)}
+              >
                 <div className="p-6 flex flex-col flex-1">
                   <h3 
                     className="text-xl font-display font-bold text-white mb-3 line-clamp-2"
@@ -191,6 +202,51 @@ export default function Services() {
           </div>
         )}
       </div>
+
+      <Dialog open={!!selectedService} onOpenChange={() => setSelectedService(null)}>
+        <DialogContent className="max-w-2xl bg-slate-900 border-white/10 text-white">
+          <DialogHeader>
+            <DialogTitle className="text-2xl md:text-3xl font-display font-bold text-white mb-2">
+              {selectedService?.title}
+            </DialogTitle>
+            <div className="flex items-center gap-2 text-lg text-cyan-400 mb-4">
+              <DollarSign className="h-5 w-5" />
+              <span className="font-medium">{selectedService?.priceRange}</span>
+            </div>
+          </DialogHeader>
+          <DialogDescription className="text-gray-300 text-base leading-relaxed">
+            {selectedService?.description}
+          </DialogDescription>
+          <div className="mt-6">
+            <p className="text-sm font-medium text-gray-400 mb-3">Perfect for:</p>
+            <div className="flex flex-wrap gap-2">
+              {selectedService?.targetClients.map((client) => (
+                <Badge
+                  key={client}
+                  variant="secondary"
+                  className="bg-white/10 text-gray-300 border-white/20"
+                  data-testid={`badge-modal-client-${client.toLowerCase().replace(/\s+/g, '-')}`}
+                >
+                  {client}
+                </Badge>
+              ))}
+            </div>
+          </div>
+          <div className="mt-6 pt-6 border-t border-white/10">
+            <Button
+              onClick={() => {
+                setSelectedService(null);
+                document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="w-full bg-cyan-500 hover:bg-cyan-600 text-white"
+              data-testid="button-contact-service"
+            >
+              Get Started
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+
       <SectionArrow targetSection="#contact" variant="dark" />
     </section>
   );
