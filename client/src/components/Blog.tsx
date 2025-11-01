@@ -59,7 +59,7 @@ export default function Blog() {
             className="text-4xl md:text-5xl font-display font-bold text-gray-900 dark:text-white mb-4"
             data-testid="text-blog-heading"
           >
-            Latest Articles
+            Freelance Services
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Insights on web development, best practices, and tech trends
